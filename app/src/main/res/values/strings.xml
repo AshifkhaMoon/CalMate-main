@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CalMate</string>
+    <string name="welcome">Welcome!</string>
+    <string name="calmate">CalMate</string>
+    <string name="your_path_to_wellness">“Your path to wellness”</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter password...</string>
+    <string name="name">Name</string>
+    <string name="enter_your_fullname">enter your fullname</string>
+    <string name="confirm_password">confirm password</string>
+</resources>
