@@ -6,4 +6,209 @@
     android:layout_height="match_parent"
     tools:context=".CalculateCalories">
 
+    <TextView
+        android:layout_width="373dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/calorie_intake_calculator"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/what_is_your_gender"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="69dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="88dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="72dp"
+        android:contentDescription="@string/male_icon"
+        android:src="@drawable/male_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="192dp"
+        android:contentDescription="@string/female_icon"
+        android:src="@drawable/female_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <Button
+        android:id="@+id/male_btn"
+        android:layout_width="108dp"
+        android:layout_height="42dp"
+        android:background="@drawable/btn_bg_2"
+        android:text="@string/male"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <Button
+        android:id="@+id/female_btn"
+        android:layout_width="108dp"
+        android:layout_height="42dp"
+        android:background="@drawable/btn_bg_2"
+        android:text="@string/female"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_old_are_you"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <EditText
+        android:layout_width="118dp"
+        android:layout_height="47dp"
+        android:autofillHints="NumberONLY"
+        android:inputType="number"
+        tools:ignore="LabelFor,MissingConstraints"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overlock"
+        android:text="@string/years"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How tall are you?"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="348dp" />
+
+    <EditText
+        android:layout_width="118dp"
+        android:layout_height="47dp"
+        android:autofillHints="NumberONLY"
+        android:inputType="number"
+        tools:ignore="LabelFor,MissingConstraints"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overlock"
+        android:text="@string/cm"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <EditText
+        android:layout_width="118dp"
+        android:layout_height="47dp"
+        android:autofillHints="NumberONLY"
+        android:inputType="number"
+        tools:ignore="LabelFor,MissingConstraints"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_much_do_you_weight"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="442dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overlock"
+        android:text="@string/kg"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="485dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_active_are_you_daily_basis"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="531dp" />
+
+    <Button
+        android:id="@+id/lightly_btn"
+        android:layout_width="127dp"
+        android:layout_height="41dp"
+        android:background="@drawable/btn_bg_2"
+        android:text="@string/lightly_active"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+    <Button
+        android:id="@+id/active_btn"
+        android:layout_width="127dp"
+        android:layout_height="41dp"
+        android:background="@drawable/btn_bg_2"
+        android:text="@string/active"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+    <Button
+        android:id="@+id/very_btn"
+        android:layout_width="136dp"
+        android:layout_height="46dp"
+        android:background="@drawable/btn_bg_2"
+        android:text="@string/very_active"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="628dp" />
+
+    <Button
+        android:id="@+id/done_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="@string/done"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

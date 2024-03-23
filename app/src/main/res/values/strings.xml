@@ -12,4 +12,20 @@
     <string name="name">Name</string>
     <string name="enter_your_fullname">enter your fullname</string>
     <string name="confirm_password">confirm password</string>
+    <string name="calorie_intake_calculator">Calorie Intake Calculator</string>
+    <string name="what_is_your_gender">What is your gender?</string>
+    <string name="male_icon">male_icon</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="female_icon">female_icon</string>
+    <string name="how_old_are_you">How old are you?</string>
+    <string name="years">Years</string>
+    <string name="how_much_do_you_weight">How much do you weight?</string>
+    <string name="active">Active</string>
+    <string name="lightly_active">Lightly Active</string>
+    <string name="how_active_are_you_daily_basis">How active are you daily basis?</string>
+    <string name="very_active">Very Active</string>
+    <string name="done">DONE</string>
+    <string name="kg">Kg</string>
+    <string name="cm">CM</string>
 </resources>
