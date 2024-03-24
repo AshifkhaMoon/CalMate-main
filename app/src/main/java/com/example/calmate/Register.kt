@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.google.firebase.Firebase
 import com.google.firebase.app
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firestore.v1.FirestoreGrpc.FirestoreStub
 
 class Register : AppCompatActivity() {
@@ -38,20 +39,12 @@ class Register : AppCompatActivity() {
             val password = passwordEditText.text.toString()
             val confirmPassword = confirmEditText.text.toString()
 
-            if(isValidRegistration(name, email, password, confirmPassword)){
+            if (isValidRegistration(name, email, password, confirmPassword)) {
                 auth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this) {task ->
+                    .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(this, "Registration successful!!", Toast.LENGTH_SHORT).show()
-                            val userId = auth.currentUser?.uid
-                            Intent(this, CalculateCalories::class.java).also { intent ->
-                                userId?.let { id ->
-                                    intent.putExtra("USER_ID", id)
-                                }
-                                startActivity(intent)
-                                finish()
-                            }
-                        } else{
+                            saveUserToDatabase(name, email)
+                        } else {
                             Toast.makeText(this, "Authentication failed: ${task.exception?.message}",
                                 Toast.LENGTH_SHORT).show()
                         }
@@ -59,8 +52,38 @@ class Register : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Invalid registration details", Toast.LENGTH_SHORT).show()
             }
-
         }
+    }
+
+    private fun saveUserToDatabase(name: String, email: String) {
+        val userId = auth.currentUser?.uid ?: return
+
+        val userData = hashMapOf(
+            "name" to name,
+            "email" to email,
+            "age" to 0,
+            "weight" to 0.0,
+            "height" to 0,
+            "memberStatus" to false
+        )
+
+        val db = FirebaseFirestore.getInstance()
+        db.collection("users").document(userId).set(userData)
+            .addOnSuccessListener {
+                Toast.makeText(this, "User saved to database", Toast.LENGTH_SHORT).show()
+                navigateUpCalculateCalories(userId)
+            }
+            .addOnFailureListener{
+                Toast.makeText(this, "Failed to save user data: ${it.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun navigateUpCalculateCalories(userId: String) {
+        val intent = Intent(this, CalculateCalories::class.java).apply {
+            putExtra("USER_ID", userId)
+        }
+        startActivity(intent)
+        finish()
     }
 
     private fun isValidRegistration(name: String, email: String, password: String, confirmPassword: String): Boolean {
