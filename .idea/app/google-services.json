@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "582379913250",
+    "project_id": "calmate-7f67b",
+    "storage_bucket": "calmate-7f67b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582379913250:android:76b22854764dbb88fc4a7b",
+        "android_client_info": {
+          "package_name": "com.example.calmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwyJ2KpKD8vbngRwfdEGSZclOu5U2GuGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

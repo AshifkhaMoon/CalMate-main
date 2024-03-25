@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCaloriesActivity">
+
+
+    <ImageView
+        android:id="@+id/navigation_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/navigate_back"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/AddCaloriesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Calories"
+        android:fontFamily="@font/overlock"
+        app:layout_constraintTop_toBottomOf="@id/navigation_back"
+        android:textSize="36sp"
+
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutBreakfast"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/card_bg"
+        app:layout_constraintTop_toBottomOf="@id/AddCaloriesTv"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/progressBarBreakfast"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progress_small_bg"
+                android:translationZ="1dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/iconBreakfastLayout"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintTop_toTopOf="@id/progressBarBreakfast"
+                         app:layout_constraintBottom_toBottomOf="@id/progressBarBreakfast"
+                        app:layout_constraintLeft_toLeftOf="@id/progressBarBreakfast"
+                        app:layout_constraintRight_toRightOf="@id/progressBarBreakfast"
+                        android:background="@drawable/icon_bg"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/cup_of_tea"/>
+                    </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breakfast"
+                android:fontFamily="@font/overlock"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/breakFast_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56/635 Cal"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/overlock"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/breakfast_add_button"
+            android:layout_width="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="50dp"
+
+            android:src="@drawable/add"/>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutLunch"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/card_bg"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayoutBreakfast"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/progressBarLunch"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progress_small_bg"
+                android:translationZ="1dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/iconLunchLayout"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintTop_toTopOf="@id/progressBarLunch"
+                         app:layout_constraintBottom_toBottomOf="@id/progressBarLunch"
+                        app:layout_constraintLeft_toLeftOf="@id/progressBarLunch"
+                        app:layout_constraintRight_toRightOf="@id/progressBarLunch"
+                        android:background="@drawable/icon_bg"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/lunch"/>
+                    </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lunch"
+                android:fontFamily="@font/overlock"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Lunch_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="840/847 Cal"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/overlock"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Lunch_add_button"
+            android:layout_width="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="50dp"
+
+            android:src="@drawable/add"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutDinner"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/card_bg"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayoutLunch"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/progressBarDinner"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progress_small_bg"
+                android:translationZ="1dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/iconDinnerLayout"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintTop_toTopOf="@id/progressBarDinner"
+                         app:layout_constraintBottom_toBottomOf="@id/progressBarDinner"
+                        app:layout_constraintLeft_toLeftOf="@id/progressBarDinner"
+                        app:layout_constraintRight_toRightOf="@id/progressBarDinner"
+                        android:background="@drawable/icon_bg"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/chicken"/>
+                    </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dinner"
+                android:fontFamily="@font/overlock"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Dinner_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="376/529 Cal"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/overlock"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Dinner_add_button"
+            android:layout_width="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="50dp"
+
+            android:src="@drawable/add"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutSnacks"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/card_bg"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayoutDinner"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/progressBarSnacks"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progress_small_bg"
+                android:translationZ="1dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/iconSnacksLayout"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintTop_toTopOf="@id/progressBarSnacks"
+                         app:layout_constraintBottom_toBottomOf="@id/progressBarSnacks"
+                        app:layout_constraintLeft_toLeftOf="@id/progressBarSnacks"
+                        app:layout_constraintRight_toRightOf="@id/progressBarSnacks"
+                        android:background="@drawable/icon_bg"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/banana"/>
+                    </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snacks"
+                android:fontFamily="@font/overlock"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Snacks_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1/106 Cal"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/overlock"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Snacks_add_button"
+            android:layout_width="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="50dp"
+            android:src="@drawable/add"/>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
