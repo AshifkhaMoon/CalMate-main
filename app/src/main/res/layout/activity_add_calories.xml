@@ -62,23 +62,23 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
-                    <LinearLayout
-                        android:id="@+id/iconBreakfastLayout"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        app:layout_constraintTop_toTopOf="@id/progressBarBreakfast"
-                         app:layout_constraintBottom_toBottomOf="@id/progressBarBreakfast"
-                        app:layout_constraintLeft_toLeftOf="@id/progressBarBreakfast"
-                        app:layout_constraintRight_toRightOf="@id/progressBarBreakfast"
-                        android:background="@drawable/icon_bg"
-                        >
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/cup_of_tea"/>
-                    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/iconBreakfastLayout"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/progressBarBreakfast"
+                app:layout_constraintBottom_toBottomOf="@id/progressBarBreakfast"
+                app:layout_constraintLeft_toLeftOf="@id/progressBarBreakfast"
+                app:layout_constraintRight_toRightOf="@id/progressBarBreakfast"
+                android:background="@drawable/icon_bg"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/cup_of_tea"/>
+            </LinearLayout>
 
 
 
@@ -152,23 +152,23 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
-                    <LinearLayout
-                        android:id="@+id/iconLunchLayout"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        app:layout_constraintTop_toTopOf="@id/progressBarLunch"
-                         app:layout_constraintBottom_toBottomOf="@id/progressBarLunch"
-                        app:layout_constraintLeft_toLeftOf="@id/progressBarLunch"
-                        app:layout_constraintRight_toRightOf="@id/progressBarLunch"
-                        android:background="@drawable/icon_bg"
-                        >
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/lunch"/>
-                    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/iconLunchLayout"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/progressBarLunch"
+                app:layout_constraintBottom_toBottomOf="@id/progressBarLunch"
+                app:layout_constraintLeft_toLeftOf="@id/progressBarLunch"
+                app:layout_constraintRight_toRightOf="@id/progressBarLunch"
+                android:background="@drawable/icon_bg"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/lunch"/>
+            </LinearLayout>
 
 
 
@@ -241,23 +241,23 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
-                    <LinearLayout
-                        android:id="@+id/iconDinnerLayout"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        app:layout_constraintTop_toTopOf="@id/progressBarDinner"
-                         app:layout_constraintBottom_toBottomOf="@id/progressBarDinner"
-                        app:layout_constraintLeft_toLeftOf="@id/progressBarDinner"
-                        app:layout_constraintRight_toRightOf="@id/progressBarDinner"
-                        android:background="@drawable/icon_bg"
-                        >
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/chicken"/>
-                    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/iconDinnerLayout"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/progressBarDinner"
+                app:layout_constraintBottom_toBottomOf="@id/progressBarDinner"
+                app:layout_constraintLeft_toLeftOf="@id/progressBarDinner"
+                app:layout_constraintRight_toRightOf="@id/progressBarDinner"
+                android:background="@drawable/icon_bg"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/chicken"/>
+            </LinearLayout>
 
 
 
@@ -329,23 +329,23 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
-                    <LinearLayout
-                        android:id="@+id/iconSnacksLayout"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        app:layout_constraintTop_toTopOf="@id/progressBarSnacks"
-                         app:layout_constraintBottom_toBottomOf="@id/progressBarSnacks"
-                        app:layout_constraintLeft_toLeftOf="@id/progressBarSnacks"
-                        app:layout_constraintRight_toRightOf="@id/progressBarSnacks"
-                        android:background="@drawable/icon_bg"
-                        >
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/banana"/>
-                    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/iconSnacksLayout"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/progressBarSnacks"
+                app:layout_constraintBottom_toBottomOf="@id/progressBarSnacks"
+                app:layout_constraintLeft_toLeftOf="@id/progressBarSnacks"
+                app:layout_constraintRight_toRightOf="@id/progressBarSnacks"
+                android:background="@drawable/icon_bg"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/banana"/>
+            </LinearLayout>
 
 
 

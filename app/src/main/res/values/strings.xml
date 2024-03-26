@@ -37,4 +37,5 @@
     <string name="done">DONE</string>
     <string name="kg">Kg</string>
     <string name="cm">CM</string>
+    <string name="greeting">Hello %1$s!</string>
 </resources>
