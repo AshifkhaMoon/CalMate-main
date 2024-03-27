@@ -1,5 +1,6 @@
 package com.example.calmate
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -46,5 +47,17 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    fun onRestaurantMenuButtonClick(view: View) {}
+    fun onFoodMenuButtonClick(view: View) {
+        val intent = Intent(this, FoodMenuActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onCustomerButtonClick(view: View) {
+        val intent = Intent(this, ProfileActivity::class.java)
+        startActivity(intent)
+    }
+    fun onAddButtonClick(view: View) {
+        val intent = Intent(this, AddCaloriesActivity::class.java)
+        startActivity(intent)
+    }
 }

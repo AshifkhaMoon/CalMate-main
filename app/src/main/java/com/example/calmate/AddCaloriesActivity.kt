@@ -53,10 +53,10 @@ class AddCaloriesActivity : AppCompatActivity() {
         snacksAddButton = findViewById(R.id.Snacks_add_button)
 
         setupAddButtonListeners()
-
-
         setupFirestoreListener()
     }
+
+
 
     private fun setupAddButtonListeners() {
         breakfastAddButton.setOnClickListener {

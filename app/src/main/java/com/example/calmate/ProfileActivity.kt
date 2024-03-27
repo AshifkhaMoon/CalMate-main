@@ -1,7 +1,9 @@
 package com.example.calmate
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -14,6 +16,7 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var weightTextView: TextView
     private lateinit var heightTextView: TextView
     private lateinit var memberStatusTextView: TextView
+    private lateinit var backButton: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,16 @@ class ProfileActivity : AppCompatActivity() {
         weightTextView = findViewById(R.id.tv_weight)
         heightTextView = findViewById(R.id.tv_height)
         memberStatusTextView = findViewById(R.id.tv_status)
+        backButton = findViewById(R.id.im_navigation_bar)
+
+        backButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            startActivity(intent)
+            finish()
+        }
+
+
 
         val db = FirebaseFirestore.getInstance()
 

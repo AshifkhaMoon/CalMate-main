@@ -40,4 +40,5 @@
     <string name="greeting">Hello %1$s!</string>
     <string name="hello">Hello!</string>
     <string name="calories_format">%1$d/%2$d Cal</string>
+    <string name="protein">Protein</string>
 </resources>
