@@ -7,48 +7,51 @@
     tools:context=".HomeActivity">
 
 
-
-
     <TextView
         android:id="@+id/greeting_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="Hello Menna!"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="14dp"
+        android:layout_marginEnd="272dp"
         android:fontFamily="@font/overlock"
+        android:text="@string/hello"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002" />
 
     <TextView
         android:id="@+id/today_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       app:layout_constraintTop_toBottomOf="@id/greeting_tv"
-        android:text="Today"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="14dp"
+        android:layout_width="112dp"
+        android:layout_height="42dp"
         android:fontFamily="@font/overlock"
+        android:text="Today"
         android:textColor="@color/black"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:textSize="36sp"
-        app:layout_constraintLeft_toLeftOf="parent"/>
-
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayoutBottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
 
     <ProgressBar
         android:id="@+id/circleProgressBar"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:progress="30"
+        android:layout_width="320dp"
+        android:layout_height="261dp"
         android:indeterminate="true"
         android:indeterminateDrawable="@drawable/progress_bar_bg"
+        android:progress="30"
         android:progressDrawable="@drawable/progress_bar_bg"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/today_tv" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
 
     <TextView
         android:id="@+id/circleProgress_tv"
@@ -81,75 +84,52 @@
         app:layout_constraintRight_toRightOf="@id/circleProgressBar"
         app:layout_constraintTop_toBottomOf="@id/circleProgress_tv"/>
 
-    <TextView
-        android:id="@+id/eaten_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1,291"
-        android:layout_marginTop="0dp"
-        android:fontFamily="@font/overlock"
-        android:textColor="@color/black"
-        android:layout_marginStart="33dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/circleProgressBar"
-        />
 
     <TextView
         android:id="@+id/eaten_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="340dp"
+        android:fontFamily="@font/overlock"
         android:text="Eaten"
-        android:fontFamily="@font/overlock"
         android:textColor="@color/black"
-        android:layout_marginStart="33dp"
-        android:textStyle="bold"
         android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/eaten_value"
-        />
-
-   <TextView
-        android:id="@+id/burned_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="244"
-        android:layout_marginTop="0dp"
-        android:fontFamily="@font/overlock"
-        android:textColor="@color/black"
-        android:layout_marginEnd="33dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-       app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/circleProgressBar"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402" />
 
     <TextView
         android:id="@+id/burned_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Burned"
+        android:layout_marginStart="328dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/overlock"
+        android:text="Burned"
         android:textColor="@color/black"
-        android:layout_marginEnd="33dp"
-        android:textStyle="bold"
+
         android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@id/burned_value"
-        />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402" />
 
     <LinearLayout
         android:id="@+id/linearLayoutCards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical"
         android:layout_marginHorizontal="23dp"
-        app:layout_constraintTop_toBottomOf="@id/eaten_tv"
-        >
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -159,29 +139,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Carbs"
-                android:fontFamily="@font/overlock"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/overlock"
+                android:text="Carbs"
+                android:textColor="@color/black"
                 android:textSize="32sp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/burned_value"
-                />
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent" />
 
 
             <TextView
                 android:id="@+id/carbsValueTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="206/258 g"
                 android:fontFamily="@font/overlock"
+                android:text="206/258 g"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/burned_value"
-                />
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent" />
 
         </LinearLayout>
 
@@ -191,21 +167,22 @@
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:indeterminate="false"
-            android:progressDrawable="@drawable/horizontal_progress_bar_bg"
-            />
+            android:progressDrawable="@drawable/horizontal_progress_bar_bg" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/linearLayoutProtein"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
         android:layout_marginHorizontal="23dp"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutCards"
-        >
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -215,29 +192,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Protein"
-                android:fontFamily="@font/overlock"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/overlock"
+                android:text="Protein"
+                android:textColor="@color/black"
                 android:textSize="32sp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/burned_value"
-                />
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent" />
 
 
             <TextView
                 android:id="@+id/proteinValueTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="32/103g"
                 android:fontFamily="@font/overlock"
+                android:text="32/103g"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/burned_value"
-                />
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent" />
 
         </LinearLayout>
 
@@ -247,8 +220,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:indeterminate="false"
-            android:progressDrawable="@drawable/horizontal_progress_bar_bg"
-            />
+            android:progressDrawable="@drawable/horizontal_progress_bar_bg" />
 
     </LinearLayout>
 
@@ -256,11 +228,14 @@
         android:id="@+id/linearLayoutFat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
         android:layout_marginHorizontal="23dp"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutProtein"
-        >
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -270,29 +245,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fat"
-                android:fontFamily="@font/overlock"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/overlock"
+                android:text="Fat"
+                android:textColor="@color/black"
                 android:textSize="32sp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/burned_value"
-                />
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent" />
 
 
             <TextView
                 android:id="@+id/fatValueTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="32/68g"
                 android:fontFamily="@font/overlock"
+                android:text="32/68g"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/burned_value"
-                />
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent" />
 
         </LinearLayout>
 
@@ -302,44 +273,51 @@
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:indeterminate="false"
-            android:progressDrawable="@drawable/horizontal_progress_bar_bg"
-            />
+            android:progressDrawable="@drawable/horizontal_progress_bar_bg" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayoutBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
-<LinearLayout
-    android:id="@+id/linearLayoutBottomBar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintBottom_toBottomOf="parent"
-    >
-    <ImageView
-        android:layout_weight="1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/restaurant_menu"
-         />
-    <ImageView
-        android:layout_weight="1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/add"
-         />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/restaurant_menu"
+            android:onClick="onRestaurantMenuButtonClick"
+            tools:ignore="ButtonStyle" />
 
-    <ImageView
-        android:layout_weight="1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/customer"
-         />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/add"
+            android:onClick="onRestaurantMenuButtonClick"
+            style="?android:attr/buttonBarButtonStyle" />
 
-
-</LinearLayout>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/restaurant_menu"
+            android:onClick="onRestaurantMenuButtonClick"
+            style="?android:attr/buttonBarButtonStyle" />
 
 
 
+
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
