@@ -38,4 +38,5 @@
     <string name="kg">Kg</string>
     <string name="cm">CM</string>
     <string name="greeting">Hello %1$s!</string>
+    <string name="calories_format">%1$d/%2$d Cal</string>
 </resources>
