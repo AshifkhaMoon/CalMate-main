@@ -48,7 +48,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun onFoodMenuButtonClick(view: View) {
-        val intent = Intent(this, FoodMenuActivity::class.java)
+        val intent = Intent(this, FoodMenu::class.java)
         startActivity(intent)
     }
 

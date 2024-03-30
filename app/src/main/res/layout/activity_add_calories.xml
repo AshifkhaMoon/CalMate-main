@@ -20,6 +20,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <ImageView
+        android:layout_width="226dp"
+        android:layout_height="245dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginBottom="576dp"
+        android:src="@drawable/crisp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/AddCaloriesTv"
         android:layout_width="wrap_content"

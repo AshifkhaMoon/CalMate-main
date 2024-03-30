@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FoodMenuActivity">
+    tools:context=".FoodMenu">
 
 
     <ImageView
-        android:id="@+id/navigation_back"
+        android:id="@+id/nav_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/navigate_back"
@@ -24,29 +24,35 @@
         android:id="@+id/foodMenuTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Food Menu"
         android:fontFamily="@font/overlock"
-        android:layout_marginStart="22dp"
-        android:textStyle="bold"
+        android:text="Food Menu"
         android:textColor="@color/black"
-
         android:textSize="32sp"
-        app:layout_constraintTop_toBottomOf="@id/navigation_back"
-        app:layout_constraintLeft_toLeftOf="parent"/>
 
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
 
     <TextView
         android:id="@+id/LossWeightTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="260dp"
         android:fontFamily="@font/just_me_again"
         android:text="Loss Weight"
         android:textColor="@color/black"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/foodMenuTV" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.169" />
 
 
     <EditText
@@ -54,57 +60,73 @@
         android:layout_width="364dp"
         android:layout_height="127dp"
         android:layout_marginHorizontal="22dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/btn_bg"
-        app:layout_constraintTop_toBottomOf="@id/LossWeightTV"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.278"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/GainWeightTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="260dp"
         android:fontFamily="@font/just_me_again"
         android:text="Gain Weight"
         android:textColor="@color/black"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lossWeightET" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
 
     <EditText
         android:id="@+id/GainWeightET"
         android:layout_width="360dp"
         android:layout_height="129dp"
         android:layout_marginHorizontal="22dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/btn_bg"
-        app:layout_constraintTop_toBottomOf="@id/GainWeightTV"
-        tools:layout_editor_absoluteX="22dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634" />
 
     <TextView
         android:id="@+id/StayTheSameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="228dp"
         android:fontFamily="@font/just_me_again"
         android:text="Stay the Same"
         android:textColor="@color/black"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/GainWeightET" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781" />
 
     <EditText
         android:id="@+id/StayTheSameET"
         android:layout_width="362dp"
         android:layout_height="124dp"
         android:layout_marginHorizontal="22dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/btn_bg"
-        app:layout_constraintTop_toBottomOf="@id/StayTheSameTV"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

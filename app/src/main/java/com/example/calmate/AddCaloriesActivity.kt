@@ -1,6 +1,7 @@
 package com.example.calmate
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.PixelCopy.Request
@@ -29,6 +30,7 @@ class AddCaloriesActivity : AppCompatActivity() {
     private lateinit var lunchAddButton: ImageView
     private lateinit var dinnerAddButton: ImageView
     private lateinit var snacksAddButton: ImageView
+    private lateinit var backButton: ImageView
 
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
@@ -51,6 +53,14 @@ class AddCaloriesActivity : AppCompatActivity() {
         lunchAddButton = findViewById(R.id.Lunch_add_button)
         dinnerAddButton = findViewById(R.id.Dinner_add_button)
         snacksAddButton = findViewById(R.id.Snacks_add_button)
+        backButton = findViewById(R.id.navigation_back)
+
+        backButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            startActivity(intent)
+            finish()
+        }
 
         setupAddButtonListeners()
         setupFirestoreListener()

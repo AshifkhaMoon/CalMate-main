@@ -16,7 +16,7 @@
             android:name=".AddCaloriesActivity"
             android:exported="false" />
         <activity
-            android:name=".FoodMenuActivity"
+            android:name=".FoodMenu"
             android:exported="false" />
         <activity
             android:name=".CalculateCaloriesActivity"
