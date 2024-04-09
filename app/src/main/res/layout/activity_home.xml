@@ -6,110 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="340dp"
-        android:contentDescription="@string/burger"
-        android:rotation="20.37"
-        android:src="@drawable/burger"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
-
-    <ImageView
-        android:layout_width="230dp"
-        android:layout_height="210dp"
-        android:layout_marginEnd="292dp"
-        android:contentDescription="@string/junk_food"
-        android:rotation="166.47"
-        android:src="@drawable/junkfood"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
-
-    <ImageView
-        android:layout_width="252dp"
-        android:layout_height="174dp"
-        android:layout_marginEnd="284dp"
-        android:rotation="15.65"
-        android:src="@drawable/orange"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
-
-    <ImageView
-        android:layout_width="137dp"
-        android:layout_height="149dp"
-        android:layout_marginStart="356dp"
-        android:src="@drawable/watermelon"
-        android:rotation="10.61"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
-
-    <ImageView
-        android:layout_width="108dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="360dp"
-        android:rotation="-45.67"
-        android:src="@drawable/fries"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
-
-    <ImageView
-        android:layout_width="109dp"
-        android:layout_height="112dp"
-        android:layout_marginEnd="360dp"
-        android:src="@drawable/icecream"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.967" />
-
-    <ImageView
-        android:layout_width="160dp"
-        android:layout_height="112dp"
-        android:layout_marginStart="320dp"
-        android:rotation="-15.76"
-        android:src="@drawable/avcado"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
 
     <TextView
         android:id="@+id/greeting_tv"
-        android:layout_width="154dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="248dp"
+        android:layout_width="241dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="160dp"
         android:fontFamily="@font/overlock"
         android:text="@string/hello"
-        android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
-
-
+        app:layout_constraintVertical_bias="0.002" />
 
     <TextView
         android:id="@+id/today_tv"
         android:layout_width="112dp"
         android:layout_height="42dp"
         android:fontFamily="@font/overlock"
-        android:text="@string/today"
+        android:text="Today"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayoutBottomBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -170,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginEnd="196dp"
+        android:layout_marginEnd="340dp"
         android:fontFamily="@font/overlock"
         android:text="Eaten"
         android:textColor="@color/black"
@@ -180,7 +100,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
+        app:layout_constraintVertical_bias="0.402" />
+
+    <TextView
+        android:id="@+id/burned_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/overlock"
+        android:text="Burned"
+        android:textColor="@color/black"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402" />
 
     <LinearLayout
         android:id="@+id/linearLayoutCards"
@@ -351,7 +289,7 @@
 
         <Button
             android:layout_width="80dp"
-            android:layout_height="101dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:drawableTop="@drawable/restaurant_menu"
@@ -360,8 +298,8 @@
 
         <Button
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="100dp"
-            android:layout_height="101dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:drawableTop="@drawable/add"
@@ -370,7 +308,7 @@
         <Button
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="80dp"
-            android:layout_height="match_parent"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:drawableTop="@drawable/customer"

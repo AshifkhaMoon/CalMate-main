@@ -37,6 +37,8 @@ android {
 }
 
 dependencies {
+    implementation ("androidx.work:work-runtime-ktx:2.7.0")
+    implementation ("com.google.android.gms:play-services-tasks:17.2.1")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation ("com.android.volley:volley:1.2.0")
     implementation("com.google.firebase:firebase-auth")

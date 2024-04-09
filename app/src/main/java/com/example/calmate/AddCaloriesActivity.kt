@@ -2,21 +2,20 @@ package com.example.calmate
 
 import android.app.Dialog
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.view.PixelCopy.Request
-import android.view.PixelCopy.Request.Builder
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.RequiresApi
-import okhttp3.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.OkHttpClient
+import okhttp3.Response
 import org.json.JSONObject
 import java.io.IOException
 
@@ -34,7 +33,6 @@ class AddCaloriesActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_calories)
@@ -103,7 +101,7 @@ class AddCaloriesActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun getCaloriesForFood(foodName: String, meal: String) {
+     fun getCaloriesForFood(foodName: String, meal: String) {
         val client = OkHttpClient()
         val request = okhttp3.Request.Builder()
             .url("https://api.calorieninjas.com/v1/nutrition?query=$foodName")
@@ -126,14 +124,20 @@ class AddCaloriesActivity : AppCompatActivity() {
                         if (items.length() > 0) {
                             val item = items.getJSONObject(0)
                             val caloriesPer100g = item.getDouble("calories")
+                            val fatsPer100g = item.getDouble("fat_total_g")
+                            val carbsPer100g = item.getDouble("carbohydrates_total_g")
+                            val proteinsPer100g = item.getDouble("protein_g")
 
                             val weightString = foodName.substringAfterLast(" ", "100")
                             val weight = weightString.filter { it.isDigit() || it == '.' }.toDoubleOrNull() ?: 100.0
 
                             val caloriesForWeight = (caloriesPer100g * weight) / 100.0
+                            val fatsForWeight = (fatsPer100g * weight) / 100.0
+                            val carbsForWeight = (carbsPer100g * weight) / 100.0
+                            val proteinsForWeight = (proteinsPer100g * weight) / 100.0
 
                             runOnUiThread {
-                                updateCalorieCount(meal, caloriesForWeight.toInt())
+                                updateCalorieCount(meal, caloriesForWeight.toInt(), fatsForWeight, carbsForWeight, proteinsForWeight)
                             }
                         }
                     }
@@ -142,32 +146,54 @@ class AddCaloriesActivity : AppCompatActivity() {
         })
     }
 
-    private fun updateCalorieCount(meal: String, caloriesToAdd: Int) {
+    private fun updateCalorieCount(
+        meal: String,
+        caloriesToAdd: Int,
+        fatsForWeight: Double,
+        carbsForWeight: Double,
+        proteinsForWeight: Double
+    ) {
         val userId = auth.currentUser?.uid ?: return
 
+        // Firestore reference to the user's document
         val userRef = firestore.collection("users").document(userId)
-        val mealToFieldMap = mapOf(
-            "breakfast" to "breakfastCalories",
-            "lunch" to "lunchCalories",
-            "dinner" to "dinnerCalories",
-            "snacks" to "snacksCalories"
-        )
 
-        val mealField = mealToFieldMap[meal]
-        if (mealField.isNullOrEmpty()) {
-            Toast.makeText(this, "Invalid meal type.", Toast.LENGTH_SHORT).show()
-            return
-        }
-
+        // Begin a transaction to update user's calories and macros
         firestore.runTransaction { transaction ->
             val snapshot = transaction.get(userRef)
-            val currentCalories = snapshot.getLong(mealField) ?: 0L
+            val currentCalories = snapshot.getLong(meal) ?: 0L
+            val currentFats = snapshot.getDouble("fatsTotal") ?: 0.0
+            val currentCarbs = snapshot.getDouble("carbsTotal") ?: 0.0
+            val currentProteins = snapshot.getDouble("proteinsTotal") ?: 0.0
+
             val newCalories = currentCalories + caloriesToAdd
-            transaction.update(userRef, mealField, newCalories)
+            val newFatsTotal = (currentFats + fatsForWeight).toInt()
+            val newCarbsTotal = (currentCarbs + carbsForWeight).toInt()
+            val newProteinsTotal = (currentProteins + proteinsForWeight).toInt()
+
+            val mealToFieldMap = mapOf(
+                "breakfast" to "breakfastCalories",
+                "lunch" to "lunchCalories",
+                "dinner" to "dinnerCalories",
+                "snacks" to "snacksCalories"
+            )
+
+            val mealField = mealToFieldMap[meal]
+            if (mealField.isNullOrEmpty()) {
+                Toast.makeText(this, "Invalid meal type.", Toast.LENGTH_SHORT).show()
+            }
+
+            transaction.update(userRef, mapOf(
+                meal to newCalories.toInt(),
+                "fatsTotal" to newFatsTotal,
+                "carbsTotal" to newCarbsTotal,
+                "proteinsTotal" to newProteinsTotal
+            ))
+
         }.addOnSuccessListener {
-            Toast.makeText(this, "$meal calories updated.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Nutritional data updated for $meal.", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener { e ->
-            Toast.makeText(this, "Failed to update $meal calories: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error updating nutritional data: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
         }
     }
     private fun calculateAndDisplayMealCalories(bmr: Int, currentBreakfastCalories: Int, currentLunchCalories: Int, currentDinnerCalories: Int, currentSnacksCalories: Int) {
@@ -195,7 +221,6 @@ class AddCaloriesActivity : AppCompatActivity() {
     private fun calculateProgressBarPercentage(current: Int, goal: Int): Int {
         return (current.toFloat() / goal * 100).toInt()
     }
-
     private fun setupFirestoreListener() {
         val userId = auth.currentUser?.uid ?: return
 
@@ -209,10 +234,10 @@ class AddCaloriesActivity : AppCompatActivity() {
 
                 if (snapshot != null && snapshot.exists()) {
                     val bmr = snapshot.getLong("bmr")?.toInt() ?: 0
-                    val currentBreakfastCalories = snapshot.getLong("breakfastCalories")?.toInt() ?: 0
-                    val currentLunchCalories = snapshot.getLong("lunchCalories")?.toInt() ?: 0
-                    val currentDinnerCalories = snapshot.getLong("dinnerCalories")?.toInt() ?: 0
-                    val currentSnacksCalories = snapshot.getLong("snacksCalories")?.toInt() ?: 0
+                    val currentBreakfastCalories = snapshot.getLong("breakfast")?.toInt() ?: 0
+                    val currentLunchCalories = snapshot.getLong("lunch")?.toInt() ?: 0
+                    val currentDinnerCalories = snapshot.getLong("dinner")?.toInt() ?: 0
+                    val currentSnacksCalories = snapshot.getLong("snacks")?.toInt() ?: 0
 
                     calculateAndDisplayMealCalories(bmr, currentBreakfastCalories, currentLunchCalories, currentDinnerCalories, currentSnacksCalories)
                 } else {
