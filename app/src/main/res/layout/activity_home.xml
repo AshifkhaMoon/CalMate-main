@@ -22,6 +22,80 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.002" />
 
+
+    <ImageView
+        android:layout_width="296dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="256dp"
+        android:rotation="20.37"
+        android:src="@drawable/burger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093"
+        android:contentDescription="@string/burger" />
+
+
+    <ImageView
+        android:layout_width="252dp"
+        android:layout_height="131dp"
+        android:layout_marginEnd="288dp"
+        android:contentDescription="@string/burger"
+        android:rotation="166.47"
+        android:src="@drawable/junkfood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <ImageView
+        android:layout_width="241dp"
+        android:layout_height="142dp"
+        android:layout_marginEnd="284dp"
+        android:contentDescription="@string/burger"
+        android:rotation="15.65"
+        android:src="@drawable/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.544" />
+
+    <ImageView
+        android:layout_width="241dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="288dp"
+        android:contentDescription="@string/burger"
+        android:rotation="10.61"
+        android:src="@drawable/watermelon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <ImageView
+        android:layout_width="241dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="288dp"
+        android:contentDescription="@string/burger"
+        android:rotation="-45.67"
+        android:src="@drawable/fries"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
+
+    <ImageView
+        android:layout_width="241dp"
+        android:layout_height="142dp"
+        android:layout_marginEnd="284dp"
+        android:contentDescription="@string/burger"
+        android:rotation="-45.67"
+        android:src="@drawable/icecream"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91" />
+
     <TextView
         android:id="@+id/today_tv"
         android:layout_width="112dp"
@@ -90,7 +164,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginEnd="340dp"
+        android:layout_marginEnd="192dp"
         android:fontFamily="@font/overlock"
         android:text="Eaten"
         android:textColor="@color/black"
@@ -100,25 +174,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
-
-    <TextView
-        android:id="@+id/burned_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="328dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="@font/overlock"
-        android:text="Burned"
-        android:textColor="@color/black"
-
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
+        app:layout_constraintVertical_bias="0.406" />
 
     <LinearLayout
         android:id="@+id/linearLayoutCards"
@@ -316,6 +372,8 @@
 
 
     </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

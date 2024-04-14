@@ -20,113 +20,193 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <ImageView
+        android:id="@+id/menu_image"
+        android:layout_width="319dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="160dp"
+        android:contentDescription="@string/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/menu" />
+
     <TextView
         android:id="@+id/foodMenuTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/overlock"
-        android:text="Food Menu"
+        android:text="@string/food_menu"
         android:textColor="@color/black"
         android:textSize="32sp"
-
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.096" />
+
+
+
+    <ImageView
+        android:id="@+id/breakfast_btn"
+        android:layout_width="371dp"
+        android:layout_height="123dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231"
+        app:srcCompat="@drawable/btn_bg"
+        android:contentDescription="@string/box" />
+
+
+    <ImageView
+        android:id="@+id/breakfast_image"
+        android:layout_width="309dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="188dp"
+        android:contentDescription="@string/breakfast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272"
+        app:srcCompat="@drawable/breakfast" />
 
     <TextView
-        android:id="@+id/LossWeightTV"
+        android:id="@+id/Breakfasttext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="260dp"
-        android:fontFamily="@font/just_me_again"
-        android:text="Loss Weight"
-        android:textColor="@color/black"
-        android:textSize="36sp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/breakfast"
+        android:textColor="#000000"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
-
-
-    <EditText
-        android:id="@+id/lossWeightET"
-        android:layout_width="364dp"
-        android:layout_height="127dp"
-        android:layout_marginHorizontal="22dp"
-        android:background="@drawable/btn_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.262" />
+
+    <ImageView
+        android:id="@+id/lunch_btn"
+        android:layout_width="371dp"
+        android:layout_height="123dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.476"
+        app:srcCompat="@drawable/btn_bg"
+        android:contentDescription="@string/box" />
+
+    <ImageView
+        android:id="@+id/lunch_image"
+        android:layout_width="301dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="188dp"
+        android:contentDescription="@string/lunch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@drawable/lunche" />
 
     <TextView
-        android:id="@+id/GainWeightTV"
+        android:id="@+id/Lunchtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="260dp"
-        android:fontFamily="@font/just_me_again"
-        android:text="Gain Weight"
-        android:textColor="@color/black"
-        android:textSize="36sp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/lunch"
+        android:textColor="#000000"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.485" />
-
-    <EditText
-        android:id="@+id/GainWeightET"
-        android:layout_width="360dp"
-        android:layout_height="129dp"
-        android:layout_marginHorizontal="22dp"
-        android:background="@drawable/btn_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.634" />
+        app:layout_constraintVertical_bias="0.483" />
+
+    <ImageView
+        android:id="@+id/dinner_btn"
+        android:layout_width="371dp"
+        android:layout_height="123dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.726"
+        app:srcCompat="@drawable/btn_bg"
+        android:contentDescription="@string/box" />
+
+    <ImageView
+        android:id="@+id/dinner_image"
+        android:layout_width="336dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="160dp"
+        android:contentDescription="@string/lunch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.762"
+        app:srcCompat="@drawable/dinners" />
 
     <TextView
-        android:id="@+id/StayTheSameTV"
+        android:id="@+id/Dinnertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="228dp"
-        android:fontFamily="@font/just_me_again"
-        android:text="Stay the Same"
-        android:textColor="@color/black"
-        android:textSize="36sp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/dinner"
+        android:textColor="#000000"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
-
-    <EditText
-        android:id="@+id/StayTheSameET"
-        android:layout_width="362dp"
-        android:layout_height="124dp"
-        android:layout_marginHorizontal="22dp"
-        android:background="@drawable/btn_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.703" />
+
+    <ImageView
+        android:id="@+id/snacks_btn"
+        android:layout_width="371dp"
+        android:layout_height="123dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957"
+        app:srcCompat="@drawable/btn_bg"
+        android:contentDescription="@string/box" />
+
+    <ImageView
+        android:id="@+id/snacks_image"
+        android:layout_width="323dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="172dp"
+        android:contentDescription="@string/lunch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
+        app:srcCompat="@drawable/snack" />
+
+    <TextView
+        android:id="@+id/Snackstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overlock"
+        android:text="@string/snacks"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

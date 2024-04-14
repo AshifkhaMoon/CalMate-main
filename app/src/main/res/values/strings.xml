@@ -45,4 +45,11 @@
     <string name="today">Today</string>
     <string name="junk_food">junk_food</string>
     <string name="macronutrient_format">%1$d/%2$d g</string>
+    <string name="food_menu">Food Menu</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="box">box</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="snacks">Snacks</string>
+    <string name="menu">Menu</string>
 </resources>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name="Calmate"
+        android:name=".Calmate"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalMate"
         tools:targetApi="31">
+        <activity
+            android:name=".Breakfast"
+            android:exported="false" />
         <activity
             android:name=".AddCaloriesActivity"
             android:exported="false" />
