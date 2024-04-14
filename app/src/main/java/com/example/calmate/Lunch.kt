@@ -3,19 +3,14 @@ package com.example.calmate
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
-class Breakfast : AppCompatActivity() {
+class Lunch : AppCompatActivity() {
 
     private lateinit var backButton: ImageView
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_breakfast)
+        setContentView(R.layout.activity_lunch)
 
         backButton = findViewById(R.id.nav_back)
 
@@ -26,5 +21,5 @@ class Breakfast : AppCompatActivity() {
             finish()
         }
 
-        }
     }
+}

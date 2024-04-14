@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Breakfast">
+    tools:context=".Dinner">
 
     <ImageView
         android:id="@+id/nav_back"
@@ -20,11 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/BreakfastTV"
+        android:id="@+id/DinnerTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/overlock"
-        android:text="@string/breakfast"
+        android:text="@string/dinner"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -37,23 +37,23 @@
         app:layout_constraintVertical_bias="0.134" />
 
     <ImageView
-        android:id="@+id/breakfast_image"
+        android:id="@+id/dinner_image"
         android:layout_width="309dp"
         android:layout_height="111dp"
-        android:layout_marginStart="148dp"
-        android:contentDescription="@string/breakfast"
+        android:layout_marginStart="116dp"
+        android:contentDescription="@string/dinner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.082"
-        app:srcCompat="@drawable/breakfast" />
+        app:srcCompat="@drawable/dinners" />
 
     <ImageView
         android:id="@+id/snack_image"
         android:layout_width="393dp"
         android:layout_height="232dp"
         android:layout_marginEnd="216dp"
-        android:contentDescription="@string/breakfast"
+        android:contentDescription="@string/snacks"
         android:rotation="-31.16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +67,7 @@
         android:layout_height="158dp"
         android:layout_marginTop="676dp"
         android:layout_marginEnd="280dp"
-        android:contentDescription="@string/breakfast"
+        android:contentDescription="@string/apple"
         android:rotation="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -78,7 +78,7 @@
         android:layout_width="223dp"
         android:layout_height="112dp"
         android:layout_marginStart="284dp"
-        android:contentDescription="@string/breakfast"
+        android:contentDescription="@string/watermelon"
         android:rotation="-31.16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
         android:layout_width="213dp"
         android:layout_height="101dp"
         android:layout_marginStart="300dp"
-        android:contentDescription="@string/breakfast"
+        android:contentDescription="@string/junk_food"
         android:rotation="-31.16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,7 +173,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/overlock"
-        android:text="Mid Calories"
+        android:text="@string/mid_calories"
         android:textColor="#000000"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -182,6 +182,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.58" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
