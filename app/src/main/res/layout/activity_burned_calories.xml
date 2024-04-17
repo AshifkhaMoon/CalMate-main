@@ -7,4 +7,50 @@
     android:layout_height="match_parent"
     tools:context=".BurnedCalories">
 
+    <ImageView
+        android:layout_width="173dp"
+        android:layout_height="221dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginBottom="556dp"
+        android:src="@drawable/crisp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="173dp"
+        android:layout_height="221dp"
+        android:layout_marginStart="260dp"
+        android:src="@drawable/avcadoexcerise"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="534dp" />
+
+    <TextView
+        android:id="@+id/BurnTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overlock"
+        android:text="@string/burned_calories"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <ImageView
+        android:id="@+id/nav_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/navigate_back"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

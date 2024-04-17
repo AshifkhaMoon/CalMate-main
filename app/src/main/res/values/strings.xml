@@ -98,4 +98,5 @@
     <string name="mid_calories">Mid Calories</string>
     <string name="apple">apple</string>
     <string name="watermelon">watermelon</string>
+    <string name="burned_calories">Burned Calories</string>
 </resources>
