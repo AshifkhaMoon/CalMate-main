@@ -139,4 +139,9 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, AddCaloriesActivity::class.java)
         startActivity(intent)
     }
+
+    fun onExceriseButtonClick(view: View) {
+        val intent = Intent(this, BurnedCalories::class.java)
+        startActivity(intent)
+    }
 }

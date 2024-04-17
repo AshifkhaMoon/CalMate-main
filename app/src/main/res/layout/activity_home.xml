@@ -100,17 +100,16 @@
         android:id="@+id/today_tv"
         android:layout_width="112dp"
         android:layout_height="42dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/overlock"
         android:text="Today"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayoutBottomBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/circleProgressBar"
@@ -333,47 +332,58 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayoutBottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="0dp">
 
-        <Button
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:drawableTop="@drawable/restaurant_menu"
-            android:onClick="onFoodMenuButtonClick"
-            tools:ignore="ButtonStyle" />
+    <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="704dp"
+        android:layout_marginEnd="304dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/customer"
+        android:onClick="onCustomerButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:drawableTop="@drawable/add"
-            android:onClick="onAddButtonClick" />
+    <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="704dp"
+        android:layout_marginEnd="204dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/add"
+        android:onClick="onAddButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:drawableTop="@drawable/customer"
-            android:onClick="onCustomerButtonClick" />
+    <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="704dp"
+        android:layout_marginEnd="96dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/restaurant_menu"
+        android:onClick="onFoodMenuButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    </LinearLayout>
-
-
+    <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="708dp"
+        android:layout_marginEnd="4dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/exercise"
+        android:onClick="onExceriseButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
