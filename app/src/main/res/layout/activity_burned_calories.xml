@@ -19,10 +19,11 @@
     <ImageView
         android:layout_width="173dp"
         android:layout_height="221dp"
-        android:layout_marginStart="260dp"
+        android:layout_marginStart="236dp"
         android:src="@drawable/avcadoexcerise"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="534dp" />
+        tools:layout_editor_absoluteY="534dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/BurnTV"

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.CalMate"
         tools:targetApi="31">
         <activity
+            android:name=".SubscriptionPlan"
+            android:exported="false" />
+        <activity
             android:name=".BurnedCalories"
             android:exported="false" />
         <activity

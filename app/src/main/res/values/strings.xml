@@ -99,4 +99,12 @@
     <string name="apple">apple</string>
     <string name="watermelon">watermelon</string>
     <string name="burned_calories">Burned Calories</string>
+    <string name="subscription_plan">Subscription Plan</string>
+    <string name="running_heart">running heart</string>
+    <string name="basic_plan_free">Basic Plan (Free)</string>
+    <string name="features_like_calorie_tracking_and_food_logging">- Features like calorie tracking and food logging</string>
+    <string name="premium_plan_monthly">Premium Plan (Monthly)</string>
+    <string name="_5_99">€ 5.99</string>
+    <string name="full_access_to_all_features">- Full access to all features</string>
+    <string name="ad_free_experience">- Ad-free experience</string>
 </resources>
