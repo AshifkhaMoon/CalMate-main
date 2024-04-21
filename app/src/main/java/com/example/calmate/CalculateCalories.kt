@@ -91,7 +91,7 @@ class CalculateCalories : AppCompatActivity() {
         firestore.collection("users").document(userId).set(userProfile, SetOptions.merge())
             .addOnSuccessListener {
                 Toast.makeText(this, "Data saved successfully with BMR: $bmr", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, ProfileActivity::class.java)
+                val intent = Intent(this, SubscriptionPlan::class.java)
                 startActivity(intent)
                 finish()
             }

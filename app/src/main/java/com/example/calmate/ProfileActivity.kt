@@ -3,6 +3,7 @@ package com.example.calmate
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.google.firebase.Firebase
@@ -17,6 +18,8 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var heightTextView: TextView
     private lateinit var memberStatusTextView: TextView
     private lateinit var backButton: ImageView
+    private lateinit var updateButton: Button
+    private lateinit var subscribeButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +31,8 @@ class ProfileActivity : AppCompatActivity() {
         heightTextView = findViewById(R.id.tv_height)
         memberStatusTextView = findViewById(R.id.tv_status)
         backButton = findViewById(R.id.im_navigation_bar)
+        updateButton = findViewById(R.id.update_data_btn)
+        subscribeButton = findViewById(R.id.subscribe_btn)
 
         backButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
@@ -35,8 +40,16 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
-
+        updateButton.setOnClickListener {
+            val intent = Intent(this, CalculateCalories::class.java)
+            startActivity(intent)
+            finish()
+        }
+        subscribeButton.setOnClickListener {
+            val intent = Intent(this, SubscriptionPlan::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val db = FirebaseFirestore.getInstance()
 

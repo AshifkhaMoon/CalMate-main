@@ -6,11 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.google.firebase.Firebase
-import com.google.firebase.app
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firestore.v1.FirestoreGrpc.FirestoreStub
 
 class Register : AppCompatActivity() {
 
@@ -31,7 +28,7 @@ class Register : AppCompatActivity() {
         emailEditText = findViewById(R.id.email_address)
         passwordEditText = findViewById(R.id.password)
         confirmEditText = findViewById(R.id.Edittext_confrimpassword)
-        register_btn2 = findViewById(R.id.register_btn2)
+        register_btn2 = findViewById(R.id.update_data_btn)
 
         register_btn2.setOnClickListener {
             val name = personNameEditText.text.toString()

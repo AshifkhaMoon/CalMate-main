@@ -193,7 +193,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/arrow_done_button"
         android:layout_width="97dp"
         android:layout_height="66dp"
         android:layout_marginTop="668dp"
@@ -202,7 +203,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="done" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
