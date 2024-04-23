@@ -2,9 +2,8 @@ package com.example.calmate
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.CheckBox
-import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -14,7 +13,7 @@ class SubscriptionPlan : AppCompatActivity() {
 
     private lateinit var checkBoxBasicPlan: CheckBox
     private lateinit var checkBoxPremiumPlan: CheckBox
-    private lateinit var buttonDone: ImageButton
+    private lateinit var buttonDone: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

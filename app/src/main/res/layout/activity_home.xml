@@ -70,7 +70,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434" />
+        app:layout_constraintVertical_bias="0.491" />
 
     <ImageView
         android:layout_width="241dp"
@@ -113,8 +113,8 @@
 
     <ProgressBar
         android:id="@+id/circleProgressBar"
-        android:layout_width="320dp"
-        android:layout_height="261dp"
+        android:layout_width="347dp"
+        android:layout_height="279dp"
         android:indeterminate="true"
         android:indeterminateDrawable="@drawable/progress_bar_bg"
         android:progress="30"
@@ -130,8 +130,6 @@
         android:id="@+id/circleProgress_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="600"
-
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/overlock"
         android:textColor="@color/black"
@@ -143,37 +141,51 @@
         app:layout_constraintBottom_toBottomOf="@id/circleProgressBar"
         />
 
+
     <TextView
         android:id="@+id/circleProgressRemaining_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Remaining"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/overlock"
+        android:text="Remaining"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="@id/circleProgressBar"
         app:layout_constraintRight_toRightOf="@id/circleProgressBar"
-        app:layout_constraintTop_toBottomOf="@id/circleProgress_tv"/>
-
+        app:layout_constraintTop_toTopOf="@+id/circleProgress_tv" />
 
     <TextView
         android:id="@+id/eaten_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="192dp"
         android:fontFamily="@font/overlock"
-        android:text="Eaten"
+        android:text="Eaten 0"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutCards"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/burned_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overlock"
+        android:text="Burned 0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.406" />
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutCards"
+        app:layout_constraintHorizontal_bias="0.95"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp" />
 
     <LinearLayout
         android:id="@+id/linearLayoutCards"
@@ -337,8 +349,8 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="704dp"
-        android:layout_marginEnd="304dp"
+        android:layout_marginTop="700dp"
+        android:layout_marginEnd="312dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/customer"
@@ -350,8 +362,8 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="704dp"
-        android:layout_marginEnd="204dp"
+        android:layout_marginTop="700dp"
+        android:layout_marginEnd="216dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/add"
@@ -363,8 +375,8 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="704dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginTop="700dp"
+        android:layout_marginEnd="120dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/restaurant_menu"
@@ -376,8 +388,8 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="708dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginTop="700dp"
+        android:layout_marginEnd="28dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/exercise"

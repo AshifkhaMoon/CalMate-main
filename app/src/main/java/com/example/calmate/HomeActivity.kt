@@ -1,8 +1,10 @@
 package com.example.calmate
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +21,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var proteinTextView: TextView
     private lateinit var fatsTextView: TextView
     private lateinit var eatenTextView: TextView
+    private lateinit var burnedTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,7 @@ class HomeActivity : AppCompatActivity() {
         proteinTextView = findViewById(R.id.proteinValueTV)
         fatsTextView = findViewById(R.id.fatValueTV)
         eatenTextView = findViewById(R.id.eaten_tv)
+        burnedTextView = findViewById(R.id.burned_tv)
 
         val userId = auth.currentUser?.uid
         userId?.let {
@@ -74,6 +78,7 @@ class HomeActivity : AppCompatActivity() {
                 val lunchCalories = snapshot.getLong("lunch") ?: 0L
                 val dinnerCalories = snapshot.getLong("dinner") ?: 0L
                 val snacksCalories = snapshot.getLong("snacks") ?: 0L
+                val burnedCalories = snapshot.getLong("caloriesBurnedPerHour") ?: 0L
 
                 val totalEatenCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories
                 val remainingCalories = bmr - totalEatenCalories.toInt()
@@ -91,6 +96,7 @@ class HomeActivity : AppCompatActivity() {
                 fatsTextView.text = getString(R.string.macronutrient_format, fatsTotal, fatsAvg)
 
                 updateEatenUI(totalEatenCalories)
+                updateBurnedUI(burnedCalories)
                 updateRemainingCaloriesUI(remainingCalories)
             } else {
                 Toast.makeText(this, "User not found.", Toast.LENGTH_SHORT).show()
@@ -98,10 +104,18 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private fun updateRemainingCaloriesUI(remainingCalories: Int) {
-        val remainingCaloriesTextView: TextView = findViewById(R.id.circleProgress_tv)
+        val remainingCaloriesTextView: TextView = findViewById(R.id.circleProgressRemaining_tv)
+        val circleProgressBar: ProgressBar = findViewById(R.id.circleProgressBar)
 
-        remainingCaloriesTextView.text = remainingCalories.toString()
+        if (remainingCalories < 0) {
+            remainingCaloriesTextView.text = getString(R.string.overeaten_format, remainingCalories * -1)
+            circleProgressBar.progressDrawable = getDrawable(R.drawable.progressbar_small_red)
+        } else {
+            remainingCaloriesTextView.text = getString(R.string.remaining_format, remainingCalories)
+            circleProgressBar.progressDrawable = getDrawable(R.drawable.progress_small_bg)
+        }
     }
 
     private fun calculateTotalEatenCalories() {
@@ -124,8 +138,12 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun updateEatenUI(totalEaten: Long) {
-        eatenTextView.text = "Eaten \n $totalEaten"
+        eatenTextView.text = "Eaten $totalEaten"
     }
+    private fun updateBurnedUI(burnedCalories: Long) {
+        burnedTextView.text = "Burned $burnedCalories"
+    }
+
     fun onFoodMenuButtonClick(view: View) {
         val intent = Intent(this, FoodMenu::class.java)
         startActivity(intent)

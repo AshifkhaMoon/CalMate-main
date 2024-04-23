@@ -107,4 +107,6 @@
     <string name="_5_99">€ 5.99</string>
     <string name="full_access_to_all_features">- Full access to all features</string>
     <string name="ad_free_experience">- Ad-free experience</string>
+    <string name="overeaten_format">&#160;&#160;&#160;&#160;%1$d\nOvereaten</string>
+    <string name="remaining_format">&#160;&#160;&#160;&#160;%1$d\nRemaining</string>
 </resources>
