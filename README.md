@@ -10,3 +10,8 @@ Introduction of the teammembers:-
 - **Maksim Kantur**, [GitHub account](https://github.com/MaksimKantur)
 - **Mena Nguyen**, [GitHub account](https://github.com/m3na02)
 - **Ashif Moon**, [GitHub account](https://github.com/AshifkhaMoon)
+
+  
+## Project Overview
+
+The objective of this project was to develop an android application:In this project we have build an calories count app and how to gain and reduce weight.Basically this app has two platform one is for the free user where he or she can count his calories only and other platform is paid where user can get some food suggestion according to there calories.This app focus on the fitness concern people who are really eager to control their calories intake.We have successfully accomplished the framework of our Mobile Development project.
